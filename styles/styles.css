@@ -1,0 +1,230 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+img[src="./images/beach.jpg"] {
+  opacity: 0.4;
+  transform: rotate(180deg);
+  width: 100%;
+  height: 100%;
+}
+/* 
+  Código erroneo
+  img {
+  opacity: 0.4;
+  transform: rotate(180deg);
+  width: 100%;
+  background: no-repeat;
+} */
+img[src="./images/HEADER HOME-80.jpg"] {
+  width: 100%;
+  opacity: 0.7;
+}
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.listmenu {
+  display: flex;
+  list-style: none;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  width: 100%;
+  justify-content: flex-end;
+}
+.listmenu > li {
+  padding: 10px;
+}
+
+.navmenu {
+  color: #b36846;
+  background-color: #ffa67d;
+  padding-top: 30px;
+  padding-right: 30px;
+}
+
+.design-submenu {
+  display: none;
+  list-style: none;
+}
+
+.subvar-menu:hover .design-submenu {
+  display: block;
+  position: absolute;
+}
+
+.logo {
+  padding-left: 5%;
+  margin-top: 5%;
+}
+
+a[href="./index.html"]{
+  text-decoration: none;
+  font-family:'Helvetica Neue', sans-serif;
+  color: #e1fffb
+
+}
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700);
+
+.title-letter {
+  font-family: "Playfair Display";
+  color: #442535;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  font-size: calc(6vw + 1rem);
+  margin-left: -2px;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper {
+  position: relative;
+}
+
+#title {
+  font-weight: 500;
+  display: inline-flex;
+  margin: -5px;
+  padding: 5px;
+}
+
+.title-letter {
+  font-size: calc(3vw + 1rem);
+  margin-left: -2px;
+}
+.title-message {
+  display: flex;
+  justify-content: center;
+}
+h2 {
+  display: flex;
+  color: #b36846;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  width: 30%;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Carousel */
+
+.carousel {
+  position: relative;
+  width: 400px;
+  border: 10px solid white;
+  margin: 8% auto;
+  box-shadow: 0px 0px 40px #000;
+}
+.carousel > img {
+  display: none;
+  width: 100%;
+}
+.carousel > input {
+  position: absolute;
+  left: -9999px;
+}
+.carousel > input:checked + label + img {
+  display: block;
+}
+
+.carousel > label,
+.carousel > input:checked ~ label ~ label ~ label ~ label {
+  display: none;
+}
+.carousel > input:checked + label {
+  display: block;
+  left: 0;
+}
+.carousel > input:checked ~ label ~ label ~ label {
+  display: block;
+  right: 0;
+}
+
+.carousel > label {
+  position: absolute;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  visibility: hidden;
+}
+.carousel > label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+}
+.carousel > label:after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 25px;
+  height: 25px;
+  line-height: 22px;
+  margin: -15px 10px 0 10px;
+  background-color: black;
+  color: white;
+  font-family: "Arial";
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  visibility: hidden;
+  border: 2px solid white;
+  border-radius: 20px;
+  box-shadow: 0 3px 4px black;
+}
+.carousel > label:hover:after {
+  visibility: visible;
+}
+
+.carousel > input:checked + label:after {
+  left: 0;
+  content: "\00AB";
+}
+.carousel > input:checked ~ label ~ label ~ label:after {
+  right: 0;
+  content: "\00BB";
+}
+
+h4 a {
+  text-decoration: none;
+  font-family:"Lato", sans-serif;
+  color: #b36846;
+  display: flex;
+  justify-content: center;
+}
+
+/* Footer */
+.footer {
+  background-color: #34b3a6;
+  /* right: 0;
+  bottom: 0;
+  left: 0; */
+  margin-top: 15%;
+  padding: 1rem;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  color: #b36846;
+}
+
+@media (max-width: 1000px) {
+  img[src="./images/beach.jpg"] {
+    height: 1000px;
+
+  }
+  .footer{
+    height: 110px;
+  }
+}
